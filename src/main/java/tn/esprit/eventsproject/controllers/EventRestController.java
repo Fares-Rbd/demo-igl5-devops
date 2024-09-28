@@ -14,8 +14,7 @@ import java.util.List;
 @RequestMapping("event")
 @RestController
 public class EventRestController {
-
-    //testttt
+    
     private final IEventServices eventServices;
 
     @PostMapping("/addPart")
