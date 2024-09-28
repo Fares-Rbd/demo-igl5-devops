@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("event")
 @RestController
 public class EventRestController {
-    
+
     private final IEventServices eventServices;
 
     @PostMapping("/addPart")
@@ -35,6 +35,7 @@ public class EventRestController {
     }
     @GetMapping("/getLogs/{d1}/{d2}")
     public List<Logistics> getLogistiquesDates (@PathVariable("d1") LocalDate date_debut, @PathVariable("d2") LocalDate date_fin){
+        System.out.println("date_debut = " + date_debut);
         return eventServices.getLogisticsDates(date_debut,date_fin);
     }
 }
