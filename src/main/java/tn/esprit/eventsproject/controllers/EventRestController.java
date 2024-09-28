@@ -36,6 +36,7 @@ public class EventRestController {
     @GetMapping("/getLogs/{d1}/{d2}")
     public List<Logistics> getLogistiquesDates (@PathVariable("d1") LocalDate date_debut, @PathVariable("d2") LocalDate date_fin){
         System.out.println("date_debut = " + date_debut);
+        System.out.println("TEST");
         return eventServices.getLogisticsDates(date_debut,date_fin);
     }
 }
